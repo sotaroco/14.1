@@ -1,0 +1,52 @@
+main {
+    min-height: calc(100vh - 160px);
+  }
+
+#contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* Filas de tres columnas en pantallas grandes */
+@media (min-width: 768px) {
+  .card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
